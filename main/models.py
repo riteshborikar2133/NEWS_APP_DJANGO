@@ -24,3 +24,13 @@ class News(models.Model):
     
     def __str__(self):
         return self.title
+    
+class Comment(models.Model):
+    news=models.ForeignKey(News,on_delete=models.CASCADE)
+    name=models.CharField(max_length=100)
+    email = models.CharField(max_length=200)
+    comment = models.TextField()
+    status = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.comment

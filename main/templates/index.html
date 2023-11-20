@@ -1,0 +1,52 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Track</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    {% include 'nav.html'%}
+    {% block content %}
+    <div class="content">
+        <div class="card1">
+            <h1>{{firstn.title}}</h1>
+            <img src="mediafiles/{{firstn.image}}" alt="">
+
+            <p>{{firstn.detail}}</p>
+        </div>
+    </div>
+
+    <div class="seven">
+        <h1>RECENT NEWS</h1>
+    </div>
+
+    <div class="content">
+        {% for data in threenews%}
+        <div class="card2">
+            <img src="mediafiles/{{data.image}}" alt="">
+            <h1>{{data.title}}</h1>
+
+        </div>
+        {% endfor %}
+    </div>
+
+    {% for cat in threecat%}
+    <div class="category">
+        <div class="card3">
+            <div class="three">
+                <h1>
+                    {{cat.title}}
+                </h1>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endblock content %}
+</body>
+
+</html>

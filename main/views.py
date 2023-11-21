@@ -28,3 +28,11 @@ def onenews(request,id):
         messages.success(request,'Comment submitted')
     comments = Comment.objects.filter(news=fnews,status=True).order_by('-id')
     return render(request,'onenews.html',{'fnews':fnews,'comments':comments })
+
+
+def cnews(request,id):
+    catnews = Category.objects.get(id=id)
+    fnews = News.objects.filter(Category=catnews)
+    return render(request,'cnews.html',{'fnews':fnews})
+    # return render(request,'cnews.html',{'fnews':fnews},{'catnews':catnews})
+        

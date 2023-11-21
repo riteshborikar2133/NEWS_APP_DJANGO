@@ -20,10 +20,10 @@ body {
 .content .card1 {
     /* border: 1px solid green; */
     border-radius: 0.5rem;
-    /* width: 75%; */
     /* padding: 1rem 2rem; */
     box-shadow: 0px 0px 10px black;
     text-align: center;
+    width: 70%;
 }
 
 .content .card1 h1 {
@@ -54,7 +54,8 @@ body {
     margin: 1rem 2rem;
     text-align: center;
     border-radius: 0.5rem;
-    /* width: 75%; */
+    width: 30%;
+    /* height: 20rem; */
     /* padding: 0.52rem 0.81rem; */
     box-shadow: 0px 0px 10px black;
     text-align: center;
@@ -63,7 +64,7 @@ body {
 .content .card2 h1 {
     font-size: 1.2rem;
     text-align: left;
-    padding: 0.2rem;
+    padding: 0.5rem;
     background-color: black;
     border-radius: 0 0 0.5rem 0.5rem;
     color: white;
@@ -86,24 +87,30 @@ body {
     /* border: 1px solid red; */
     margin: 1rem 0rem;
     display: flex;
+    margin-bottom: 3rem;
     justify-content: space-evenly;
     align-items: center;
+    /* flex-direction: column; */
 }
-.category .card3{
+
+.category .card3 {
     border: 5px solid black;
-    width: 20rem;
+    width: 18rem;
     text-align: center;
     box-shadow: 5px 5px 10px black;
-    padding: 1.52rem;
+    padding: 0.52rem;
 }
-.category .card3 h2{
-    font-size: 2rem;
+
+.category .card3 h2 {
+    font-size: 1.2rem;
 }
-.category .card3:hover{
-    background:linear-gradient(50deg,#fc00ff,#00dbde);
+
+.category .card3:hover {
+    background: linear-gradient(50deg, #fc00ff, #00dbde);
     box-shadow: 5px 5px 1px black;
 }
-.category .card3:hover h2{
+
+.category .card3:hover h2 {
     color: white;
 }
 
@@ -169,7 +176,7 @@ body {
     background-color: #333;
 }
 
-.nav{
+.nav {
     background-color: black;
     color: white;
     display: flex;
@@ -177,24 +184,42 @@ body {
     margin-bottom: 2rem;
     align-items: center;
 }
-.nav .navleft{
+
+.nav .navleft {
     margin: 1rem 2rem;
 }
+
 .nav ul {
     list-style: none;
     display: flex;
 }
-.nav ul li{
+
+.nav ul li {
     margin: 1rem 2rem;
 }
 
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: .3rem;
+}
 
-.newscard{
+.nav ul li a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 0.22rem;
+}
+
+
+
+
+.newscard {
     /* display: flex; */
     justify-content: center;
     align-items: center;
 }
-.newscard .card4{
+
+.newscard .card4 {
     margin: 2rem auto;
     display: flex;
     /* align-items: center; */
@@ -204,47 +229,54 @@ body {
     box-shadow: 2px 2px 10px black;
     border: 1px black solid;
 }
-.newscard .newsimg img{
+
+.newscard .newsimg img {
     height: 12rem;
     width: 12rem;
 }
-.newscard .card4 .newstext{
+
+.newscard .card4 .newstext {
     /* border: 1px solid black; */
     margin: auto;
     display: flex;
     flex-direction: column;
 }
-.newscard .card4 .newstext h1{
+
+.newscard .card4 .newstext h1 {
     margin: 1.3rem;
     font-size: 1.52rem;
 }
-.newscard .card4 .newstext p{
+
+.newscard .card4 .newstext p {
     color: #222;
     /* border: 1px solid red; */
     height: 2.5rem;
     overflow: hidden;
     line-height: 2rem;
 }
-.newscard .card4 .newstext button{
+
+.newscard .card4 .newstext button {
     /* width: 10%; */
     margin: 1rem auto;
     border: none;
     border: 2px solid black;
     border-radius: 0.2rem;
-    padding: 0.21rem ;
-    background-color:lawngreen   ;
+    padding: 0.21rem;
+    background-color: lawngreen;
 }
-.newscard .card4 .newstext button a{
+
+.newscard .card4 .newstext button a {
     text-decoration: none;
     color: black;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
 }
-.newscard .card4 .newstext button:hover{
-    background:linear-gradient(50deg,#a8ff78,#78ffd6);
+
+.newscard .card4 .newstext button:hover {
+    background: linear-gradient(50deg, #a8ff78, #78ffd6);
 }
 
-.fnewscont{
+.fnewscont {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -254,22 +286,27 @@ body {
     border: 2px solid black;
     box-shadow: 2px 2px 10px black;
 }
-.fnewscont img{
+
+.fnewscont img {
     border: 2px solid black;
     padding: 0.2rem;
     height: auto;
     width: 80%;
 }
-.fnewscont .newcont h1{
+
+.fnewscont .newcont h1 {
     font-size: 2rem;
     margin: 1rem auto;
 }
-.fnewscont .newcont p{
-    width: 50%;
+
+.fnewscont .newcont p {
+    width: 80%;
+    padding: 0.6rem;
     margin: auto;
     background-color: rgb(181, 181, 181);
 }
-.comment{
+
+.comment {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -279,25 +316,30 @@ body {
     border: 2px solid black;
     box-shadow: 2px 2px 10px black;
 }
-.comment h2{
+
+.comment h2 {
     font-size: 1.2rem;
     text-transform: uppercase;
 }
-.comment form input{
+
+.comment form input {
     font-size: 0.81rem;
     font-family: 'Times New Roman', Times, serif;
     margin: 0.71rem auto;
     width: 10rem;
-    text-align: left;    ;
+    text-align: left;
+    ;
     padding: 0.1rem;
 }
-.comment .comt{
+
+.comment .comt {
     border: 2px solid black;
     width: 80%;
     margin: 1rem auto;
     /* border: 1px solid red; */
 }
-.comment .comt p{
+
+.comment .comt p {
     margin: 1rem 0;
     background: black;
     color: white;

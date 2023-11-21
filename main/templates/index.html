@@ -35,13 +35,23 @@
         </div>
         {% endfor %}
     </div>
-    <div class="category">
+
+
+    
+    <div class="seven">
+        <h1>Categories</h1>
+    </div>
+
+
+    <div class="category" id="cats">
         <!-- <div class="card3" style="background: url(mediafiles/{{cat.cat_img}});color: red; background-size: cover; background-position: center;"> -->
+        {% for data in threecat%}
         <div class="card3">
-            <a href="/news" style="text-decoration: none;">
-                <h2>Explore More <i class="fa-solid fa-arrow-right"></i></h2>
+            <a href="/catnews/{{data.id}}" style="text-decoration: none;">
+                <h2>{{data.title}} <i class="fa-solid fa-arrow-right"></i></h2>
             </a>
         </div>
+        {% endfor %}
     </div>
     {% endblock content %}
 </body>

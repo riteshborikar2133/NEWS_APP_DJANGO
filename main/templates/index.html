@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Track</title>
     <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
@@ -34,18 +35,14 @@
         </div>
         {% endfor %}
     </div>
-
-    {% for cat in threecat%}
     <div class="category">
+        <!-- <div class="card3" style="background: url(mediafiles/{{cat.cat_img}});color: red; background-size: cover; background-position: center;"> -->
         <div class="card3">
-            <div class="three">
-                <h1>
-                    {{cat.title}}
-                </h1>
-            </div>
+            <a href="/news" style="text-decoration: none;">
+                <h2>Explore More <i class="fa-solid fa-arrow-right"></i></h2>
+            </a>
         </div>
     </div>
-    {% endfor %}
     {% endblock content %}
 </body>
 

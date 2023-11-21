@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{fnews.title}}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    {% include 'nav.html'%}
+    <div class="fnewscont">
+        <div class="newimg">
+            <img src="/mediafiles/{{fnews.image}}" alt="">
+        </div>
+        <div class="newcont">
+            <h1>{{fnews.title}}</h1>
+            <p>{{fnews.detail}}</p>
+        </div>
+    </div>
+    <div class="comment">
+        <h2>Add Comments</h2>
+        <form action="/new/{{fnews.id}}" method="POST">
+            {% csrf_token %}
+            <input type="text" placeholder="Enter name" name="name" required> <br>
+            <input type="text" placeholder="Enter Email" name="email" required> <br>
+            <textarea name="message" id="" placeholder="Comment"
+                style="text-align:justify;font-family: 'Times New Roman', Times, serif;padding: 0.1rem;width: 10rem; margin: 1rem auto;"></textarea>
+            <br>
+            <input type="submit" style="text-align: center; background-color:greenyellow; border: 2px solid black;"
+                value="submit">
+            {% for msg in messages%}
+            <p style="color: green; margin: 1rem; font-size: 0.8rem;">{{msg}}</p>
+            {% endfor %}
+        </form>
+    </div>
+
+    <div class="comment">
+        <h2>Comments</h2>
+        {%for comment in comments%}
+        <div class="comt">
+            <p>{{comment.comment}}</p>
+            <em style="text-align: center;">- {{comment.name}}</em>
+            <br>
+            <em style="text-align: center;">- {{comment.email}}</em>
+            
+        </div>
+        {% endfor %}
+
+    </div>
+</body>
+
+</html>
